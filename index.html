@@ -8,7 +8,28 @@
 </head>
 <body>
   <header>
-    
+    <h1> Awesome Books</h1>
   </header>
+  <section id="books-container">
+    <article class="author-title-div">
+      <h3></h3>
+      <h3></h3>
+      <button class="remove-btn">Remove</button>
+      <hr>
+    </article>
+  </section>
+  <form id="awesome-forms" method="POST" action="#">
+    <div class="form-container">
+      <div>
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" placeholder="Title">
+      </div>
+      <div>
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" placeholder="Author">
+      </div>
+      <button type="submit" class="add-btn">Add</button>
+    </div>
+  </form>
 </body>
 </html>
