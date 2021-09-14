@@ -3,7 +3,7 @@
 # Awesome-Books
 > This is a low wireframed project that shows the features of a booklist section when inputted in two form inputs (The Title and The Author).
 
-![screenshot](./Screenshot.png).
+![screenshot](./ScreenShot.png).
 
 - The Page displays the low wireframe design of how a booklist will be displayed in the later stages of development.
 
@@ -24,17 +24,17 @@
 ## Prerequisites
 Basic understanding of HTML, JavaScript, CSS Git and GitHub
 
-[Live Demo Link](https://gambit142.github.io/Html-Css-javaScript-Capstone/)
+[Live Demo Link](https://benmukebo.github.io/Awesome-Books/)
 
 ## Getting Started
 
 ### To get a local copy up and running follow these simple example steps below:
 
-1. Copy this website **``https://github.com/Gambit142/Mobile-Version.git``**
+1. Copy this website **``https://github.com/BenMukebo/Awesome-Books``**
 2. Navigate to the location of the folder in your machine you wish to save this folder:
 **``you@your-Pc-name:~$ cd <folder>``**
 3. Clone this repository or download the Zip folder:
-**``git clone https://github.com/Gambit142/Mobile-Version.git``**
+**``git clone https://github.com/BenMukebo/Awesome-Books.git``**
 4. Change Directory into the cloned repository: **``you@your-Pc-name:~$ cd <Awesome-Books>``**
 5. Open the repository with Visual Code Editor: **``you@your-Pc-name:~$ code .``** or open with any code editor of your choice.
 
@@ -48,9 +48,9 @@ Basic understanding of HTML, JavaScript, CSS Git and GitHub
 
 👤 **Ben Mukebo**
 
-- GitHub: [@Gambit142](https://github.com/Gambit142)
+- GitHub: [BenMukebo](https://github.com/BenMukebo)
   
-- LinkedIn: [Francis Ugorji](www.linkedin.com/in/francis-ugorji-a567b7168)
+- LinkedIn: [Ben Mukebo](www.linkedin.com/in/kasongo-mukebo-ben-591720205)
 
 ## 🤝 Contributing
 
