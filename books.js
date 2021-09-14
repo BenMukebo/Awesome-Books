@@ -1,34 +1,30 @@
 let removeButton = [];
-const awesomeBookForms = document.getElementById('awesome-forms');
-let titleInput = document.getElementById('title');
-let authorInput= document.getElementById('author');
-let titleAuthorObject = [];
+const titleInput = document.getElementById('title');
+const authorInput = document.getElementById('author');
+let booksList = [];
 const bookContainer = document.getElementById('books-container');
 
-function removeBookFromCollection(id) {
-  console.log(id);
-  titleAuthorObject = JSON.parse(localStorage.getItem('storageFormData'));
-  const filteredArray = titleAuthorObject.filter((book) => titleAuthorObject.indexOf(book) !== id);
-  localStorage.setItem('storageFormData', JSON.stringify(filteredArray));  
-  createHtmlDiv(filteredArray);
-}
-
-
 function createHtmlDiv(listOfBooks) {
-  let books= '';
+  let books = '';
   listOfBooks.forEach((div) => {
     books += `<article class="author-title-div">
     <h3>${div.authorName}</h3>
     <h3>${div.titleName}</h3>
     <button class="remove-btn">Remove</button>
     <hr>
-    </article>`; 
+    </article>`;
   });
   bookContainer.innerHTML = books;
   removeButton = document.querySelectorAll('button.remove-btn');
   removeButton.forEach((btn, index) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
+      function removeBookFromCollection(id) {
+        booksList = JSON.parse(localStorage.getItem('storageFormData'));
+        const filteredArray = booksList.filter((book) => booksList.indexOf(book) !== id);
+        localStorage.setItem('storageFormData', JSON.stringify(filteredArray));
+        createHtmlDiv(filteredArray);
+      }
       removeBookFromCollection(index);
     });
   });
@@ -37,9 +33,9 @@ function createHtmlDiv(listOfBooks) {
 const addButton = document.querySelector('.form-container .add-btn');
 
 addButton.addEventListener('click', (e) => {
-  if(authorInput.value === '' || titleInput.value === '') return;
+  if (authorInput.value === '' || titleInput.value === '') return;
   e.preventDefault();
-  let localStorageObject = {
+  const localStorageObject = {
     authorName: authorInput.value,
     titleName: titleInput.value,
   };
@@ -52,10 +48,10 @@ addButton.addEventListener('click', (e) => {
 });
 
 function onPageLoad() {
-  if(titleAuthorObject.length === 0) { 
-    if(JSON.parse(localStorage.getItem('storageFormData'))) {
-      titleAuthorObject = JSON.parse(localStorage.getItem('storageFormData'));
-      createHtmlDiv(titleAuthorObject);
+  if (booksList.length === 0) {
+    if (JSON.parse(localStorage.getItem('storageFormData'))) {
+      booksList = JSON.parse(localStorage.getItem('storageFormData'));
+      createHtmlDiv(booksList);
     }
   }
 }
@@ -63,4 +59,3 @@ function onPageLoad() {
 window.addEventListener('load', () => {
   onPageLoad();
 });
-
