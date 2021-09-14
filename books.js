@@ -51,3 +51,16 @@ addButton.addEventListener('click', (e) => {
   titleInput.value = '';
 });
 
+function onPageLoad() {
+  if(titleAuthorObject.length === 0) { 
+    if(JSON.parse(localStorage.getItem('storageFormData'))) {
+      titleAuthorObject = JSON.parse(localStorage.getItem('storageFormData'));
+      createHtmlDiv(titleAuthorObject);
+    }
+  }
+}
+
+window.addEventListener('load', () => {
+  onPageLoad();
+});
+
