@@ -33,3 +33,21 @@ function createHtmlDiv(listOfBooks) {
     });
   });
 }
+
+const addButton = document.querySelector('.form-container .add-btn');
+
+addButton.addEventListener('click', (e) => {
+  if(authorInput.value === '' || titleInput.value === '') return;
+  e.preventDefault();
+  let localStorageObject = {
+    authorName: authorInput.value,
+    titleName: titleInput.value,
+  };
+  const listBooks = JSON.parse(localStorage.getItem('storageFormData')) || [];
+  listBooks.push(localStorageObject);
+  localStorage.setItem('storageFormData', JSON.stringify(listBooks));
+  createHtmlDiv(listBooks);
+  authorInput.value = '';
+  titleInput.value = '';
+});
+
