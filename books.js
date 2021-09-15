@@ -33,22 +33,20 @@ class CreateBook {
   removeBookFromCollection(id) {
     this.booksList = JSON.parse(localStorage.getItem('storageFormData'));
     const filteredArray = this.booksList.filter((book) => this.booksList.indexOf(book) !== id);
-    console.log(filteredArray);
     localStorage.setItem('storageFormData', JSON.stringify(filteredArray));
     this.createHtmlDiv(filteredArray);
   }
+
   addButtonFunction() {
     addButton.addEventListener('click', (e) => {
       if (this.author.value === '' || this.title.value === '') return;
-      console.log(this.author.value);
       e.preventDefault();
-      let localStorageObject = {
+      const localStorageObject = {
         authorName: this.author.value,
         titleName: this.title.value,
       };
       const listBooks = JSON.parse(localStorage.getItem('storageFormData')) || [];
       listBooks.push(localStorageObject);
-      console.log(listBooks);
       localStorage.setItem('storageFormData', JSON.stringify(listBooks));
       this.createHtmlDiv(listBooks);
     });
