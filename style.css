@@ -27,13 +27,11 @@ article:nth-child(odd) {
 .author-title-div {
   display: flex;
   justify-content: space-between;
-  /* width: 100%; */
   padding: 0.825rem 0.625rem;
 }
 
 .book-info {
   font-size: 0.9rem;
-  /* width: 85%; */
 }
 
 .remove-btn {
@@ -44,3 +42,51 @@ article:nth-child(odd) {
   font-weight: bold;
 }
 
+#awesome-forms h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+h2::before {
+  content: " ";
+  display: block;
+  background-color: #000;
+  width: 30%;
+  height: 3px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.form-container {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+input {
+  margin-bottom: 0.5rem;
+  border: 3px solid #000;
+}
+
+#title,
+#author {
+  font-size: 0.95rem;
+  padding-left: 0.4rem;
+  color: #000;
+}
+
+#title::placeholder,
+#author::placeholder {
+  color: #000;
+  font-weight: bolder;
+}
+
+.add-btn {
+  padding: 0 0.25rem;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 5px 3px #000;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: end;
+  transform: translateX(4.38rem);
+}
