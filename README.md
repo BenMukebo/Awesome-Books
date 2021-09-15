@@ -1,9 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Awesome-Books
-> This is a low wireframed project that shows the features of a booklist section when inputted in two form inputs (The Title and The Author).
+> This is a low wireframed project that shows the features of a booklist section when inputted in two form inputs (The Title and The Author)
 
-![screenshot](./ScreenShot.png).
+> |Mobile Version|Desktop Version|
+> |--------------|---------------|
+> |![screenshot](./ScreenShot2.png).|![screenshot2](ScreenShot3.png)|
 
 - The Page displays the low wireframe design of how a booklist will be displayed in the later stages of development.
 
@@ -70,4 +72,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./MIT.md) |licensed.

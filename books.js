@@ -8,10 +8,10 @@ function createHtmlDiv(listOfBooks) {
   let books = '';
   listOfBooks.forEach((div) => {
     books += `<article class="author-title-div">
-    <h3>${div.authorName}</h3>
-    <h3>${div.titleName}</h3>
+    <h3 class="book-info">"${div.titleName}" by ${div.authorName}</h3>
+    <div>
     <button class="remove-btn">Remove</button>
-    <hr>
+    <div>
     </article>`;
   });
   bookContainer.innerHTML = books;
