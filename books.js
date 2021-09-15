@@ -37,5 +37,37 @@ class CreateBook {
     localStorage.setItem('storageFormData', JSON.stringify(filteredArray));
     this.createHtmlDiv(filteredArray);
   }
+  addButtonFunction() {
+    addButton.addEventListener('click', (e) => {
+      if (this.author.value === '' || this.title.value === '') return;
+      console.log(this.author.value);
+      e.preventDefault();
+      let localStorageObject = {
+        authorName: this.author.value,
+        titleName: this.title.value,
+      };
+      const listBooks = JSON.parse(localStorage.getItem('storageFormData')) || [];
+      listBooks.push(localStorageObject);
+      console.log(listBooks);
+      localStorage.setItem('storageFormData', JSON.stringify(listBooks));
+      this.createHtmlDiv(listBooks);
+    });
+  }
 
+  onPageLoad() {
+    if (this.booksList.length === 0) {
+      if (JSON.parse(localStorage.getItem('storageFormData'))) {
+        this.booksList = JSON.parse(localStorage.getItem('storageFormData'));
+        this.createHtmlDiv(this.booksList);
+      }
+    }
+  }
 }
+
+const newBook = new CreateBook(titleInput, authorInput);
+newBook.booksList = JSON.parse(localStorage.getItem('storageFormData')) || [];
+newBook.createHtmlDiv(newBook.booksList);
+newBook.addButtonFunction();
+window.addEventListener('load', () => {
+  newBook.onPageLoad();
+});
