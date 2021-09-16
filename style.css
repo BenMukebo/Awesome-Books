@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
 }
 
 h1 {
@@ -40,11 +41,13 @@ article:nth-child(odd) {
   box-shadow: 2px 2px 5px 3px #000;
   font-size: 0.9rem;
   font-weight: bold;
+  height: 1.75rem;
 }
 
 #awesome-forms h2 {
   text-align: center;
   margin-top: 2rem;
+  font-size: 2rem;
 }
 
 h2::before {
@@ -89,4 +92,58 @@ input {
   font-weight: bold;
   text-align: end;
   transform: translateX(4.38rem);
+}
+
+.footer-div {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  border: 2px solid #000;
+  margin: 0.625rem 0.4rem 0 0.4rem;
+  background-color: #ccc;
+  padding: 0.825rem 0.625rem;
+  position: fixed;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+}
+
+.logo a {
+  color: #000;
+  background-image: url('/orange-background.jpeg');
+  background-position: bottom center;
+  background-size: contain;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #000;
+  padding: 0.825rem 0 0.825rem 0.625rem;
+  margin: 0.1rem 0.4rem 0 0.4rem;
+  background-color: #ccc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.items {
+  border-right: 1px solid #000;
+  padding-right: 0.5rem;
+  color: #000;
+}
+
+.contacts {
+  border: none;
+}
+
+#container {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
 }
