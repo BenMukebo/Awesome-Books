@@ -53,6 +53,16 @@ class CreateBook {
     });
   }
 
+  showTime() {
+    /* eslint-disable */
+  window.addEventListener('load', () => {
+  const { DateTime } = luxon;
+  this.time = DateTime.now();
+  document.getElementById('date-time').textContent = this.time.toLocaleString(DateTime.DATETIME_MED); 
+  });
+  /* eslint-enable */
+  }
+
   onPageLoad() {
     if (this.booksList.length === 0) {
       if (JSON.parse(localStorage.getItem('storageFormData'))) {
@@ -67,6 +77,7 @@ const newBook = new CreateBook(titleInput, authorInput);
 newBook.booksList = JSON.parse(localStorage.getItem('storageFormData')) || [];
 newBook.createHtmlDiv(newBook.booksList);
 newBook.addButtonFunction();
+newBook.showTime();
 window.addEventListener('load', () => {
   newBook.onPageLoad();
 });

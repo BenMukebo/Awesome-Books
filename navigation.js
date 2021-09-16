@@ -1,7 +1,6 @@
 const listLink = document.querySelector('.list');
 const addBookLink = document.querySelector('.add-new');
 const contactLink = document.querySelector('.contacts');
-const mainContainer = document.getElementById('container');
 const listBookContainer = document.getElementById('list-books');
 const formContainer = document.getElementById('awesome-forms');
 const contactContainer = document.getElementById('contact-div');
@@ -36,7 +35,3 @@ function displayContactInformation() {
 listLink.addEventListener('click', displayListOfBooks);
 addBookLink.addEventListener('click', displayAddFormDiv);
 contactLink.addEventListener('click', displayContactInformation);
-
-const { DateTime } = luxon;
-const time = DateTime.local();
-document.getElementById('date-time').innerHTML = time.toLocaleString(DateTime.DATETIME_MED);
