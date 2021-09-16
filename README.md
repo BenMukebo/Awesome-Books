@@ -64,14 +64,13 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your sup
+## Show your support
 
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
 - **``Microverse``** for the opportunity to underatake such project using their platform
-- 
 - To family and friends who motivated us throughout this project
 
 ## 📝 License
