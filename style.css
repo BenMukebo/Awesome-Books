@@ -115,7 +115,6 @@ input {
   background-size: contain;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent;
 }
 
 .nav-bar {
@@ -146,4 +145,59 @@ input {
 #container {
   margin-top: 7rem;
   margin-bottom: 7rem;
+}
+
+#contact-div {
+  margin-top: 2rem;
+}
+
+#contact-div h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#contact-div p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+ul {
+  list-style-type: square;
+  margin: 2rem;
+  background-color: #ccc;
+}
+
+#awesome-forms,
+#contact-div {
+  display: none;
+}
+
+.message {
+  color: #ec5242;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.list {
+  color: #00f;
+}
+
+.date-div {
+  width: 100%;
+  position: fixed;
+  top: 3.2rem;
+  background-color: #fff;
+  z-index: 10;
+  height: 1.56rem;
+}
+
+#date-time {
+  display: block;
+  color: #00f;
+  position: fixed;
+  right: 1rem;
+  z-index: 5;
 }
