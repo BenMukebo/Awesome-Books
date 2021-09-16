@@ -9,25 +9,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1> All Awesome Books</h1>
-  </header>
-  <section id="books-container">
-  </section>
-  <form id="awesome-forms" action="#">
-    <h2>Add a new Book</h2>
-    <div class="form-container">
-      <div>
-        <label for="title"></label>
-        <input type="text" id="title" name="title" placeholder="Title">
-      </div>
-      <div>
-        <label for="author"></label>
-        <input type="text" id="author" name="author" placeholder="Author">
-      </div>
-      <button type="submit" class="add-btn">Add</button>
+  <nav class="nav-bar">
+    <div class="logo">
+      <a href="./index.html">Awesome Books</a>
     </div>
-  </form>
-  <script src="books.js"></script>
+    <div>
+      <a href="./index.html" class="items list">List</a>
+      <a href="#awesome-forms" class="items add-new">Add new</a>
+      <a href="#contact-div" class="items contacts">Contacts</a>
+    </div>
+  </nav>
+  <div class="date-div">
+    <p id="date-time"></p>
+  </div>
+  <main id="container">
+    <section id="list-books" class="list-book-div">
+      <div class="header-div">
+        <h1> All Awesome Books</h1>
+      </div>
+      <section id="books-container">
+      </section>
+    </section>
+    <form id="awesome-forms" action="#">
+      <h2>Add a new Book</h2>
+      <div class="form-container">
+        <div>
+          <label for="title"></label>
+          <input type="text" id="title" name="title" placeholder="Title">
+        </div>
+        <div>
+          <label for="author"></label>
+          <input type="text" id="author" name="author" placeholder="Author">
+        </div>
+        <button type="submit" class="add-btn">Add</button>
+        <p class="message"></p>
+      </div>
+    </form>
+    </main>
+<script src="luxon.min.js"></script>
+<script src="books.js"></script>
+ <script src="navigation.js"></script>
 </body>
 </html>
