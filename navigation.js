@@ -16,7 +16,7 @@ function displayListOfBooks() {
 }
 
 function displayAddFormDiv() {
-  formContainer.style.display = 'block'
+  formContainer.style.display = 'block';
   listBookContainer.style.display = 'none';
   contactContainer.style.display = 'none';
   addBookLink.style.color = 'blue';
@@ -37,7 +37,6 @@ listLink.addEventListener('click', displayListOfBooks);
 addBookLink.addEventListener('click', displayAddFormDiv);
 contactLink.addEventListener('click', displayContactInformation);
 
-let DateTime = luxon.DateTime;
-let time = DateTime.local();
+const { DateTime } = luxon;
+const time = DateTime.local();
 document.getElementById('date-time').innerHTML = time.toLocaleString(DateTime.DATETIME_MED);
-

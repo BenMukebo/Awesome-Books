@@ -48,8 +48,8 @@ class CreateBook {
       listBooks.push(localStorageObject);
       localStorage.setItem('storageFormData', JSON.stringify(listBooks));
       this.createHtmlDiv(listBooks);
-      let message = document.querySelector('.message'); 
-      message.innerHTML = `${this.title.value} by ${this.author.value} has been added to list of books`
+      const message = document.querySelector('.message');
+      message.innerHTML = `${this.title.value} by ${this.author.value} has been added to list of books`;
     });
   }
 
