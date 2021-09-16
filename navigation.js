@@ -24,3 +24,20 @@ function displayAddFormDiv() {
   contactLink.style.color = 'black';
 }
 
+function displayContactInformation() {
+  contactContainer.style.display = 'block';
+  listBookContainer.style.display = 'none';
+  formContainer.style.display = 'none';
+  contactLink.style.color = 'blue';
+  addBookLink.style.color = 'black';
+  listLink.style.color = 'black';
+}
+
+listLink.addEventListener('click', displayListOfBooks);
+addBookLink.addEventListener('click', displayAddFormDiv);
+contactLink.addEventListener('click', displayContactInformation);
+
+let DateTime = luxon.DateTime;
+let time = DateTime.local();
+document.getElementById('date-time').innerHTML = time.toLocaleString(DateTime.DATETIME_MED);
+
