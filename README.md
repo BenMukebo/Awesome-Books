@@ -1,22 +1,26 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Awesome-Books
-> This is a low wireframed project that shows the features of a booklist section when inputted in two form inputs (The Title and The Author)
+> This is a **Single Page App** complete website with navigation that display three sections dynamically using JS.
 
-> |Mobile Version|Desktop Version|
-> |--------------|---------------|
-> |![screenshot](./ScreenShot2.png).|![screenshot2](ScreenShot3.png)|
-
-- The Page displays the low wireframe design of how a booklist will be displayed in the later stages of development.
-
-- There are two form controls
-  - The Title Form Control
-  - The Author Form Control
+> |List Book|Add book section|Contact section|
+> |------------|----------------|---------------|
+> |![screenshot](Screenshot1.png).|![screenshot2](Screenshot2.png)| ![screenshot2](Screenshot3.png)|
 
 
-- The values of the form control should be dynamically created in the DOM when the *`Add`* button is clicked.
+- The Single Page App has three links in the navigation which display these sections when clicked.
 
-- The values of the form control which is dynamically displayed on the page should be removed when the *`Remove`* button is clicked.
+- The three section are
+  - The List Book section
+  - The Add Book section
+  - The Contact section
+
+
+- When the anchor list link is clicked, it displays the list of books section while the contact and add form section is hidden.
+
+- When the anchor add book link is clicked, it displays the form control section while the contact and list section is hidden.
+  
+- When the anchor contact information link is clicked, it displays the contact information section while the add book and list section is hidden.
 
 ## Built With
 
